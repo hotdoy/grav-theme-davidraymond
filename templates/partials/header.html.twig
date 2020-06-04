@@ -1,82 +1,38 @@
-<div class="header__shim"></div>
+{# LOGO #}
+<a class="nav-logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
 
-{# LANDSCAPE ONSCROLL #}
-<section id="header-landscape-onscroll" class="landscape">
-    <div class="wrapper">
-        
-        {# LOGO #}
-        <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
+{# TOGGLE #}
+<button class="nav-toggle">Menu</button>
 
-        {# NAV #}
-        <nav class="nav">
+{# PANEL #}
+<nav class="nav-panel">
+    <ul>
+
+        {# PRIMARY #}
+        {% for a in pages.children.visible %}
+        <li><a class="{{ (a.active or a.activeChild) ? 'active' : '' }}" href="{{ a.url }}">{{ a.menu }}</a>
+            {% if a.children.visible %}
             <ul>
-                <li class="lang">{% include 'partials/lang.html.twig' %}</li>
-                {% for p in pages.children.visible %}
-                <li class="link"><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
+                {% for b in a.children.visible %}
+                <li><a class="{{ (b.active or b.activeChild) ? 'active' : '' }}" href="{{ b.url }}">{{ b.menu }}</a></li>
                 {% endfor %}
             </ul>
-        </nav>
+            {% endif %}
+        </li>
+        {% endfor %}
+        <li><a class="portrait" href="/">Instagram</a></li>
+        <li><a class="portrait" href="/">T.(+1)555 555 5555</a></li>
+        <li><a class="portrait" href="/">davidraymondraymond@gmail.com</a></li>
+    </ul>
+</nav>
 
-    </div>
-</section>
+{# CONTACT #}
+<div class="nav-contact landscape">
+    <a href="/">T.(+1)555 555 5555</a>
+    <a href="/">davidraymondraymond@gmail.com</a>
+</div>
 
-{# LANDSCAPE #}
-<section id="header-landscape" class="landscape">
-    <div class="wrapper">
-        
-        {# LOGO #}
-        <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
-
-        {# NAV #}
-        <nav class="nav">
-        	<ul>
-        		<li class="lang">{% include 'partials/lang.html.twig' %}</li>
-           		{% for p in pages.children.visible %}
-        		<li class="link"><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
-    			{% endfor %}
-    		</ul>
-        </nav>
-
-    </div>
-</section>
-
-{# PORTRAIT ONSCROLL #}
-<section id="header-portrait-onscroll" class="portrait">
-    <div class="wrapper">
-    
-        {# LOGO #}
-        <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
-
-        {# TOGGLE #}
-        <button class="header-panel__on material-icons">menu</button>
-    </div>
-</section>
-
-{# PORTRAIT #}
-<section id="header-portrait" class="portrait">
-    <div class="wrapper">
-        
-        {# LOGO #}
-        <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
-
-        {# TOGGLE #}
-        <button class="header-panel__on material-icons">menu</button>
-        
-        {# PANEL #}
-        <nav class="panel">
-            <div class="panel__header">
-                <a class="logo" href="{{ home_url }}">{% include 'partials/logo.html.twig' %}</a>
-                <button class="header-panel__off material-icons">close</button>
-            </div>
-            <ul>
-                {% for p in pages.children.visible %}
-                <li><a class="{{ (p.active or p.activeChild) ? 'active' : '' }}" href="{{ p.url }}">{{ p.menu }}</a></li>
-                {% endfor %}
-                <li class="lang">{% include 'partials/lang.html.twig' %}</li>
-            </ul>
-        </nav>
-
-    </div>
-</section>
-
-
+{# SOCIAL #}
+<div class="nav-social landscape">
+    <a href="/">Instagram</a>
+</div>
