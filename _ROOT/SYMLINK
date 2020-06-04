@@ -1,0 +1,19 @@
+Local setup
+
+project_dir
+|_grav-admin
+| |_user (symlink)
+|_user  
+| |_grav-theme (symlink)
+|_grav-theme
+
+SYMLINKS
+
+Webroot to Grav install
+mklink /D D:\Dev\xampp\htdocs\davidraymond D:\Dev\_PROJECTS\davidraymond\grav-admin
+
+Grav-admin user folder to project user
+mklink /D D:\Dev\_PROJECTS\davidraymond\grav-admin\user D:\Dev\_PROJECTS\davidraymond\user
+
+user/themes/project-theme to grav-theme-name
+mklink /D D:\Dev\_PROJECTS\davidraymond\user\themes\davidraymond D:\Dev\_PROJECTS\grav-theme-davidraymond
