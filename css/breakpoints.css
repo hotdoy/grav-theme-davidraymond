@@ -1,0 +1,4 @@
+.landscape{display: block;}
+@media (max-width: 735px) {.landscape {display: none;}}
+.portrait {display: block;}
+@media (min-width: 735px) {.portrait {display: none;}}

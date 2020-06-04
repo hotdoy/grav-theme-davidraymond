@@ -1,0 +1,49 @@
+html {
+  --width-tight: 735px;
+  --width-body: 1200px;
+  --width-site: 1600px;
+  --width-full: 1920px;
+  --gutter: 2rem;
+  --rhythm: 10rem;
+  --header-heigth: 5rem;
+}
+
+@media (max-width: 735px) {
+  html {
+    --rhythm: 8rem;
+  }
+}
+@media (max-width: 380px) {
+  html {
+    --rhythm: 6rem;
+    --gutter: 1rem;
+  }
+}
+
+.tight {
+  max-width: var(--width-tight);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.body {
+  max-width: var(--width-body);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.site {
+  max-width: var(--width-site);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.full {
+  max-width: var(--width-full);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rhythm {
+  margin-top: var(--rhythm);
+}

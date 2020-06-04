@@ -1,0 +1,38 @@
+<link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{# INLINE #}
+{% do assets.addCss('theme://css/reset.css', { loading: 'inline' }) %}
+{% do assets.addCss('theme://css/loading.css', { loading : 'inline' }) %}
+
+{# THEME #}
+{% do assets.addCss('theme://css/colors.css') %}
+{% do assets.addCss('theme://css/fonts.css') %}
+{% do assets.addCss('theme://css/sizes.css') %}
+{% do assets.addCss('theme://css/typography.css') %}
+{% do assets.addCss('theme://css/utils.css') %}
+{% do assets.addCss('theme://css/reveal.css') %}
+{% do assets.addCss('theme://css/breakpoints.css') %}
+
+{# LIBS #}
+{% do assets.addCss('theme://libs/flickity/flickity.css') %}
+
+{# COMPONENENTS #}
+{% do assets.addCss('theme://css/header.css') %}
+{% do assets.addCss('theme://css/module.css') %}
+{% do assets.addCss('theme://css/content.css') %}
+{% do assets.addCss('theme://css/drawer.css') %}
+{% do assets.addCss('theme://css/buttons.css') %}
+{% do assets.addCss('theme://css/notices.css') %}
+{% do assets.addCss('theme://css/embed.css') %}
+{% do assets.addCss('theme://css/grid.css') %}
+{% do assets.addCss('theme://css/mediatext.css') %}
+{% do assets.addCss('theme://css/splash.css') %}
+{% do assets.addCss('theme://css/map.css') %}
+{% do assets.addCss('theme://css/carousel.css') %}
+{% do assets.addCss('theme://css/mailchimp.css') %}
+{% do assets.addCss('theme://css/footer.css') %}
+{% do assets.addCss('theme://css/announcement.css') %}
+
+{# CUSTOM #}
+{% do assets.addCss('theme://css/custom.css', 1) %}

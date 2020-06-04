@@ -16,4 +16,4 @@ Grav-admin user folder to project user
 mklink /D D:\Dev\_PROJECTS\davidraymond\grav-admin\user D:\Dev\_PROJECTS\davidraymond\user
 
 user/themes/project-theme to grav-theme-name
-mklink /D D:\Dev\_PROJECTS\davidraymond\user\themes\davidraymond D:\Dev\_PROJECTS\grav-theme-davidraymond
+mklink /D D:\Dev\_PROJECTS\davidraymond\user\themes\davidraymond D:\Dev\_PROJECTS\davidraymond\grav-theme-davidraymond
