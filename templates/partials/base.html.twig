@@ -13,12 +13,10 @@
 
 		{% block stylesheets %}
 			{% include 'partials/stylesheet.html.twig' %}
-			{% include 'partials/stylesheet-custom.html.twig' %}
 		{% endblock %}
 
 		{% block javascripts %}
 			{% include 'partials/javascript.html.twig' %}
-			{% include 'partials/javascript-custom.html.twig' %}
 		{% endblock %}
 
 		{% block assets deferred %}
@@ -35,7 +33,7 @@
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		{% block content %}{% endblock %}
-		{% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %}
+		{# {% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %} #}
 		{% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %}
 		{% block bottom %}{{ assets.js('bottom')|raw }}{% endblock %}
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
