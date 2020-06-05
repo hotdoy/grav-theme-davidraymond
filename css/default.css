@@ -1,0 +1,8 @@
+body.default {
+	background-color: #f3f3f3;
+}
+
+body.default .content {
+	margin-top: 25vh;
+	margin-bottom: 25vh;
+}

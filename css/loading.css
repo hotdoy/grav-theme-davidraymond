@@ -36,3 +36,19 @@ body.loaded #loading.intro {
 	opacity: 0;
 	visibility: hidden;
 }
+
+
+
+
+
+/*EXITING*/
+body.exiting .content {
+	transform: translateY(5px);
+	opacity: 0;
+	transition: all 0.2s;
+}
+
+body.exiting .nav-panel * {
+	opacity: 0;
+	transition: all 0.2s;
+}

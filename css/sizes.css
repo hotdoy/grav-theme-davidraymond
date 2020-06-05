@@ -1,27 +1,15 @@
 html {
-  --width-tight: 735px;
+  --width-text: 835px;
   --width-body: 1200px;
   --width-site: 1600px;
   --width-full: 1920px;
   --gutter: 2rem;
-  --rhythm: 10rem;
-  --header-heigth: 5rem;
+  --rhythm: 110px;
+  --header-heigth: 3rem;
 }
 
-@media (max-width: 735px) {
-  html {
-    --rhythm: 8rem;
-  }
-}
-@media (max-width: 380px) {
-  html {
-    --rhythm: 6rem;
-    --gutter: 1rem;
-  }
-}
-
-.tight {
-  max-width: var(--width-tight);
+.text {
+  max-width: var(--width-text);
   width: 100%;
   margin: 0 auto;
 }

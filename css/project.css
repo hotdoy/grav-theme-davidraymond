@@ -1,0 +1,9 @@
+body.project .content {
+	margin-top: 25vh;
+	margin-bottom: 25vh;
+}
+
+.project .content img,
+.project .content video {
+	margin-top: 25vh;
+}

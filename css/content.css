@@ -5,11 +5,16 @@
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6,
 .content p, .content blockquote, .content pre, 
 .content ul,.content ol {
-	padding: 0 var(--gutter);
+	padding: 0 calc(var(--gutter)*2);
 	width: 100%;
-	max-width: var(--width-tight);
+	max-width: var(--width-text);
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.content h1 {
+	font-family: var(--font-alt);
+	font-size: 25px;
 }
 
 .content hr {
@@ -29,7 +34,7 @@
 }
 
 .content pre {
-    max-width: var(--width-tight);
+    max-width: var(--width-text);
 }
 
 .content blockquote p {

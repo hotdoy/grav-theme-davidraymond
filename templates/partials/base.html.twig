@@ -33,11 +33,9 @@
 		{% block loading %}{% include 'partials/loading.html.twig' %}{% endblock %}
 		{% block header %}{% include 'partials/header.html.twig' %}{% endblock %}
 		{% block content %}{% endblock %}
-		{# {% block footer %}{% include 'partials/footer.html.twig' %}{% endblock %} #}
 		{% block announcements %}{% include 'partials/announcement.html.twig' %}{% endblock %}
 		{% block bottom %}{{ assets.js('bottom')|raw }}{% endblock %}
 		{% block gtm_body %}{% include 'partials/gtm-body.html.twig' %}{% endblock %}
-		{% block facebook_pixel %}{{ theme.facebook_pixel }}{% endblock %}
 		{% block serviceworker %}{% include 'partials/serviceworker.html.twig' %}{% endblock %}
 		
 	</body>

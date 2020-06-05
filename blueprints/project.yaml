@@ -1,0 +1,31 @@
+title: Product
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+
+            header.slides:
+              name: slides
+              type: list
+              style: vertical
+              label: Slides
+              fields:
+
+                .content:
+                  type: text
+                  label: Content
+
+                .selected_media:
+                  label: Media
+                  type: pagemediaselect
+                  
+                .selected_media_alt:
+                  type: text
+                  label: Media Alt
+

@@ -6,11 +6,12 @@
 
 {# PANEL #}
 <nav class="nav-panel">
+    
+    {# PRIMARY #}
     <ul>
-
-        {# PRIMARY #}
         {% for a in pages.children.visible %}
         <li><a class="{{ (a.active or a.activeChild) ? 'active' : '' }}" href="{{ a.url }}">{{ a.menu }}</a>
+            {# SECONDARY #}
             {% if a.children.visible %}
             <ul>
                 {% for b in a.children.visible %}
@@ -20,10 +21,13 @@
             {% endif %}
         </li>
         {% endfor %}
-        <li><a class="portrait" href="/">Instagram</a></li>
-        <li><a class="portrait" href="/">T.(+1)555 555 5555</a></li>
-        <li><a class="portrait" href="/">davidraymondraymond@gmail.com</a></li>
+        <div class="nav-panel__contact portrait">
+            <a class="contact portrait" href="/">Instagram</a>
+            <a class="contact portrait" href="/">T.(+1)555 555 5555</a>
+            <a class="contact portrait" href="/">davidraymondraymond@gmail.com</a>
+        </div>
     </ul>
+    <div class="nav-veil"></div>
 </nav>
 
 {# CONTACT #}
