@@ -42,7 +42,7 @@ body.loaded #loading.intro {
 
 
 /*EXITING*/
-body.exiting .content {
+body.exiting .page-content {
 	transform: translateY(5px);
 	opacity: 0;
 	transition: all 0.2s;

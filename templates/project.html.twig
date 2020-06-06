@@ -1,10 +1,45 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
-<section class="content" data-reveal-children>
-{{ page.content|raw }}
+
+<section class="wrapper" data-reveal>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			{% for s in page.header.slides %}
+			{% set selected_media = s.selected_media ? page.media[s.selected_media] %}
+			{% set selected_media_alt = s.selected_media_alt ?? '' %}
+			{% set has_content = s.content %}
+			{% set has_media = selected_media %}
+			<div class="swiper-slide">
+				{% if has_media %}
+				{% if selected_media.type == 'video' %}
+				{{ selected_media.controls(0).autoplay(1).muted(1).loop(1).html('', selected_media_alt) }}
+				{% else %}
+				{{ selected_media.html('', selected_media_alt) }}
+				{% endif %}
+				{% elseif has_content %}
+				<div class="swiper-slide__content">{{ s.content|markdown }}</div>
+				{% endif %}
+			</div>
+			{% endfor %}
+
+		</div>
+
+		    <!-- Arrows -->
+    	<div class="swiper-button-next"></div>
+    	<div class="swiper-button-prev"></div>
+	</div>
 </section>
+
+<script>
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 'auto',
+	  	centeredSlides: true,
+	  	spaceBetween: 32,
+	  	navigation: {
+        	nextEl: '.swiper-button-next',
+        	prevEl: '.swiper-button-prev',
+      	},
+	});
+</script>
+
 {% endblock %}
-
-
-
-

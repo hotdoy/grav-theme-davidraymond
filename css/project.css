@@ -1,9 +1,62 @@
-body.project .content {
-	margin-top: 25vh;
-	margin-bottom: 25vh;
+.project .wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.project .content img,
-.project .content video {
-	margin-top: 25vh;
+.project .swiper-container {
+	height: 80%;
+	width: 100%;
+}
+
+.project .swiper-slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.project .swiper-slide {
+	width: 70%;
+}
+
+
+.project .swiper-slide img,
+.project .swiper-slide video {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
+.project .swiper-slide__content {
+	max-width: var(--width-text);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.project .swiper-button-prev {
+	position: absolute;	
+	top: 0;
+	height: 100%;
+	width: 50%;
+	cursor: url('../images/arrow-left.png'), auto;
+}
+
+.project .swiper-button-next {
+	position: absolute;	
+	top: 0;
+	height: 100%;
+	width: 50%;
+	cursor: url('../images/arrow-right.png'), auto;
+}
+
+.project .swiper-button-next:after,
+.project .swiper-button-prev:after {
+ opacity: 0;
 }

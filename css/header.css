@@ -41,7 +41,7 @@
     z-index: 5000;
     opacity: 0;
     visibility: hidden;
-    transition: all 2s;
+    transition: all 0.5s;
 }
 
 .nav-veil {
@@ -58,7 +58,6 @@
 }
 
 body.nav--on .nav-panel {
-    transform: translateY(0);
     visibility: visible;
     opacity: 1;
 }
@@ -72,6 +71,14 @@ body.nav--on .nav-veil {
     margin: 5rem 0 0 2rem;
     list-style: none;
     z-index: 1;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: all 0.5s; 
+}
+
+body.nav--on .nav-panel ul {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .nav-panel ul li {
@@ -95,7 +102,7 @@ body.nav--on .nav-veil {
     font-style: italic;
 }
 
-.nav-panel__contact a {
+.nav-panel a.contact {
     font-weight: 800;
 }
 

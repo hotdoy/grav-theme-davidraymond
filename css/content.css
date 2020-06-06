@@ -12,11 +12,6 @@
 	margin-right: auto;
 }
 
-.content h1 {
-	font-family: var(--font-alt);
-	font-size: 25px;
-}
-
 .content hr {
 	margin: calc(var(--rhythm)/2) 0 calc(var(--rhythm)/2) 0;
     border: none;
@@ -39,15 +34,4 @@
 
 .content blockquote p {
 	padding: 0;
-}
-
-
-
-
-
-/*OPTIONALS*/
-
-.content.padded {
-	padding: var(--rhythm) 0 var(--rhythm) 0;
-	background-color: #f1f1f1;
 }

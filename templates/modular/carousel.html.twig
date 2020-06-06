@@ -4,8 +4,7 @@
 	{% if page.content %}
 	<div class="carousel__content">{{ page.content }}</div>
 	{% endif %}
-	<div class="carousel__ctn"
-	  data-flickity='{ "pageDots": false, "prevNextButtons": false, "cellAlign": "left" }'>
+	<div class="carousel__ctn" data-flickity='{ "pageDots": false, "prevNextButtons": false, "cellAlign": "left" }'>
 		{% for item in page.header.items %}
 		<div class="carousel__item">{{ item.content|markdown }}</div>
 		{% endfor %}	  

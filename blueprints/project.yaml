@@ -10,6 +10,9 @@ form:
         content:
           fields:
 
+            content:
+              unset@: true
+
             header.slides:
               name: slides
               type: list
@@ -18,8 +21,9 @@ form:
               fields:
 
                 .content:
-                  type: text
+                  type: markdown
                   label: Content
+                  classes: CodeMirror--small
 
                 .selected_media:
                   label: Media
