@@ -63,7 +63,7 @@ body.nav--on .nav-panel {
 }
 
 body.nav--on .nav-veil {
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .nav-panel ul {
@@ -124,3 +124,4 @@ body.nav--on .nav-panel ul {
 .nav-contact a {
     display: block;
 }
+
