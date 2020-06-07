@@ -3,5 +3,7 @@ body.default {
 }
 
 body.default .content {
-	margin-top: 25vh;
+	margin-top: 10rem;
+	margin-bottom: 5rem;
 }
+

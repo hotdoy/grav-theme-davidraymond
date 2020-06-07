@@ -5,7 +5,7 @@
 .content h1,.content h2,.content h3,.content h4,.content h5,.content h6,
 .content p, .content blockquote, .content pre, 
 .content ul,.content ol {
-	padding: 0 calc(var(--gutter)*2);
+	padding: 0 var(--gutter);
 	width: 100%;
 	max-width: var(--width-text);
 	margin-left: auto;
