@@ -1,3 +1,87 @@
+html {
+	--width-text: 835px;
+	--width-body: 1200px;
+	--width-site: 1600px;
+	--width-full: 1920px;
+
+	--gutter: 2rem;
+	--rhythm: 110px;
+	--header-heigth: 3rem;
+
+	--color-bg: #ffffff;
+	--color-fg: #313131;
+	--color-hl: #202644;
+	--color-hl-inverted: #FFF;
+}
+
+
+
+
+
+/*===========================================
+                BREAKPOINTS
+============================================*/
+
+.landscape{display: block;}
+@media (max-width: 735px) {.landscape {display: none;}}
+.portrait {display: block;}
+@media (min-width: 735px) {.portrait {display: none;}}
+
+
+
+
+
+/*===========================================
+                  MISC
+===========================================*/
+
+body {
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+}
+
+::selection {
+  background-color: var(--color-hl); 
+  color: var(--color-hl-inverted);
+}
+
+
+.text {
+  max-width: var(--width-text);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.body {
+  max-width: var(--width-body);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.site {
+  max-width: var(--width-site);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.full {
+  max-width: var(--width-full);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.rhythm {
+  margin-top: var(--rhythm);
+}
+
+
+
+
+
+/*===========================================
+					FONTS
+============================================*/
+
 /* cormorant-garamond-regular - latin */
 @font-face {
   font-family: 'Cormorant Garamond';
@@ -68,4 +152,25 @@ html {
   --font-alt: 'Inter', sans-serif;
   font-size: 16px;
   font-family: var(--font-base);
+}
+
+
+
+
+
+/*==========================================
+				MODULES
+===========================================*/
+
+.module {
+  position: relative;
+  margin-top: var(--rhythm);
+  z-index: 1000;
+}
+
+/*FIX FIRST MODULE TOP MARGIN*/
+#header-landscape + .module,
+#header-onscroll + .module,
+#header-portrait + .module {
+    margin-top: calc(var(--rhythm) - (var(--rhythm) / 2));
 }

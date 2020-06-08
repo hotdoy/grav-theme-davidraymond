@@ -1,7 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
 
-<section class="wrapper" data-reveal>
+<section class="description" data-reveal>{{ page.content }}</section>
+
+<section class="carousel" data-reveal>
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			{% for s in page.header.slides %}
@@ -24,11 +26,13 @@
 
 		</div>
 
-		    <!-- Arrows -->
-    	<div class="swiper-button-next"></div>
-    	<div class="swiper-button-prev"></div>
+		<!-- Arrows -->
+    	{# <div class="swiper-button-next"></div> #}
+    	{# <div class="swiper-button-prev"></div> #}
 	</div>
 </section>
+
+
 
 <script>
 	var swiper = new Swiper('.swiper-container', {

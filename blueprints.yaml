@@ -18,6 +18,24 @@ form:
   validation: loose
   fields:
 
+    instagram_url:
+      type: text
+      label: Instagram URL
+
+    phone:
+      type: text
+      label: Phone (Displayed)
+
+    phone_url:
+      type: text
+      label: Phone URL
+      markdown: true
+      description: 'format ```tel:+1-555-555-5555```'
+
+    email:
+      type: text
+      label: Email
+
     ga_tracking_id:
       type: text
       label: GA Tracking ID
@@ -36,24 +54,10 @@ form:
       label: Facebook App Id
       placeholder: '123456789123456'
 
-    facebook_pixel:
-      type: textarea
-      rows: 13
-      label: Facebook Pixel
-      
     twitter_site:
       type: text
       label: Twitter Site
       placeholder: '@twitter_handle'
-
-    gmaps_key:
-      type: text
-      label: Google Maps API Key
-
-    gmaps_styles:
-      type: textarea
-      rows: 13
-      label: Snazzy Maps
 
     organization_logo:
       type: text

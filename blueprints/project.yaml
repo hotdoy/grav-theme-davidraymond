@@ -10,9 +10,6 @@ form:
         content:
           fields:
 
-            content:
-              unset@: true
-
             header.slides:
               name: slides
               type: list

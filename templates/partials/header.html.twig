@@ -21,20 +21,21 @@
             {% endif %}
         </li>
         {% endfor %}
-        <li><a class="contact portrait" href="/">Instagram</a></li>
-        <li><a class="contact portrait" href="/">T.(+1)555 555 5555</a></li>
-        <li><a class="contact portrait" href="/">davidraymondraymond@gmail.com</a></li>
+        <li><a class="contact portrait" href="{{ theme.instagram_url }}">Instagram</a></li>
+        <li><a class="contact portrait" href="{{ theme.phone_url }}">{{ theme.phone }}</a></li>
+        <li><a class="contact portrait" href="mailto:{{ theme.email }}">{{ theme.email }}</a></li>
     </ul>
+    {% include 'partials/credit.html.twig' %}
     <div class="nav-veil"></div>
 </nav>
 
 {# CONTACT #}
 <div class="nav-contact landscape">
-    <a href="/">T.(+1)555 555 5555</a>
-    <a href="/">davidraymondraymond@gmail.com</a>
+    <a href="{{ theme.phone_url }}">{{ theme.phone }}</a>
+    <a href="mailto:{{ theme.email }}">{{ theme.email }}</a>
 </div>
 
 {# SOCIAL #}
 <div class="nav-social landscape">
-    <a href="/">Instagram</a>
+    <a href="{{ theme.instagram_url }}">Instagram</a>
 </div>

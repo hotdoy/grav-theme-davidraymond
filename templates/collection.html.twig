@@ -1,0 +1,20 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+
+{% set options = { items: {'@self.children':''}, 'order': {'by': 'folder', 'dir': 'asc'}} %}
+{% set items = page.collection(options) %}
+
+	<section class="list">
+
+		{% for item in items %}
+			<a class="card" href="{{ item.url() }}" data-reveal>
+				{% set image = item.media[item.header.media_order|split(',')|first] %}
+				{% if image %}
+				{{ image.html() }}
+				{% endif %}
+			</a>
+		{% endfor %}
+
+	</section>
+
+{% endblock %}

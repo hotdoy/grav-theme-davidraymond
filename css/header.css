@@ -66,6 +66,22 @@ body.nav--on .nav-veil {
     opacity: 1;
 }
 
+.nav-panel .credit {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1;
+    height: auto;
+    width: 50px;
+    opacity: 0.4;
+}
+
+@media (min-width: 1200px) {
+    .nav-panel .credit {
+        display: none;
+    }
+}
+
 .nav-panel ul {
     position: relative;
     margin: 5rem 0 0 2rem;
@@ -88,6 +104,7 @@ body.nav--on .nav-panel ul {
 .nav-panel ul ul {
     margin: 1rem 0 0 1rem;
     list-style: none;
+     transform: translateY(0);
 }
 
 .nav-panel ul li ul li {
