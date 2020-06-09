@@ -45,7 +45,6 @@ body {
   color: var(--color-hl-inverted);
 }
 
-
 .text {
   max-width: var(--width-text);
   width: 100%;

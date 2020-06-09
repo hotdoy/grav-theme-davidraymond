@@ -11,6 +11,7 @@
 	max-width: 600px;
 	z-index: 1001;
 	pointer-events: none;
+	animation-delay: 0.2s;
 }
 @media (min-width: 1200px) {
 	.project .description {
@@ -77,7 +78,6 @@
 
 .project .swiper-slide {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	width: 80%;
 	height: auto;
@@ -87,6 +87,7 @@
 
 @media (min-width: 1200px) {
 	.project .swiper-slide {
+			align-items: center;
 		width: 60%;
 	}
 }
@@ -155,13 +156,13 @@
 /*LEFT SIDE AND ARROW CURSOR*/
 .project .swiper-button-prev {
 	left: 0;
-	cursor: url('../images/arrow-left.png'), auto;
+	cursor: url('../images/arrow-left.svg'), auto;
 }
 
 /*RIGHT SIDE AND ARROW CURSOR*/
 .project .swiper-button-next {
 	right: 0;
-	cursor: url('../images/arrow-right.png'), auto;
+	cursor: url('../images/arrow-right.svg'), auto;
 }
 
 /*ADD SOME SPACE FOR OTTOM DESKTOP NAVIGATION*/
