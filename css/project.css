@@ -1,29 +1,18 @@
+
+/*===================================================
+					DESCRIPTION
+=====================================================*/
+
+
 .project .description {
 	position: relative;
-	margin-top: 10rem;
-	margin-bottom: 5rem;
+	margin: 10rem auto 5rem auto;
 	padding: 0 var(--gutter);
 	max-width: 600px;
 	z-index: 1001;
+	pointer-events: none;
 }
-
-.project .carousel {
-	position: relative;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 1000;
-}
-
 @media (min-width: 1200px) {
-	.project .carousel {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
 	.project .description {
 		position: absolute;
 		margin-top: 6rem;
@@ -33,65 +22,149 @@
 	}
 }
 
+.project .description__wrapper {
+	position: relative;
+}
+
+
+
+
+
+/*===============================================
+					CAROUSEL
+================================================*/
+
+.project .carousel {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10rem;
+	z-index: 1000;
+}
+@media (min-width: 1200px) {
+	.project .carousel {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+
+/*===============================================
+					SWIPER
+=================================================*/
+
 .project .swiper-container {
-	height: 80%;
+	padding: 1rem 0;
+	height: 100%;
 	width: 100%;
 }
 
 
+
+
+
+/*============================================
+					SLIDES
+==============================================*/
 
 .project .swiper-slide {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 70%;
+	width: 80%;
 	height: auto;
 	opacity: 1;
 	transition: opacity 0.2s;
 }
 
-.swiper-slide.swiper-slide-prev,
-.swiper-slide.swiper-slide-next {
-	opacity: 0.2;
+@media (min-width: 1200px) {
+	.project .swiper-slide {
+		width: 60%;
+	}
 }
 
-
+/*SLIDES WITH IMG OR VIDEO*/
 .project .swiper-slide img,
 .project .swiper-slide video {
 	object-fit: contain;
+	object-position: top;
 	width: 100%;
 	height: 100%;
+	transition: all 0.2s;
+}
+@media (min-width: 1200px) {
+	.project .swiper-slide img,
+	.project .swiper-slide video {
+		object-position: center;
+	}
 }
 
+/*SLIDES WITH TEXT CONTENT*/
 .project .swiper-slide__content {
-	max-width: var(--width-text);
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 700px;
 }
 
-.project .swiper-button-prev {
-	position: fixed;	
+/*FADE OUT ALL CONTENT OF NEXT AND PREV SLIDES*/
+.swiper-slide.swiper-slide-prev *,
+.swiper-slide.swiper-slide-next * {
+	opacity: 0;
+}
+
+/*FILL SPACE WITH A GREY BACKGROUND ON MOBILE*/
+@media (max-width: 1200px) {
+	.swiper-slide.swiper-slide-prev,
+	.swiper-slide.swiper-slide-next {
+		background-color: #fafafa;
+	}
+}
+
+
+
+
+/*==============================================
+				SWIPER NAVIGATION
+=============================================*/
+
+/*HIDE DEFAULT SWIPER ARROW*/
+.project .swiper-button-next:after,
+.project .swiper-button-prev:after {
+ 	opacity: 0;
+}
+
+/*MAKE SURE THEY COVER 50% OF THE SCREEN ON EACH SIDE*/
+.project .swiper-button-prev,
+.project .swiper-button-next {
+	position: absolute;	
 	top: 110px;
 	bottom: 0;
-	left: 0;
 	height: auto;
 	width: 50%;
 	outline: none;
+}
+
+/*LEFT SIDE AND ARROW CURSOR*/
+.project .swiper-button-prev {
+	left: 0;
 	cursor: url('../images/arrow-left.png'), auto;
 }
 
+/*RIGHT SIDE AND ARROW CURSOR*/
 .project .swiper-button-next {
-	position: fixed;	
-	top: 110px;
-	bottom: 0;
 	right: 0;
-	height: auto;
-	width: 50%;
-	outline: none;
 	cursor: url('../images/arrow-right.png'), auto;
 }
 
+/*ADD SOME SPACE FOR OTTOM DESKTOP NAVIGATION*/
 @media (min-width: 1200px) {
 	.project .swiper-button-next,
 	.project .swiper-button-prev {
@@ -99,9 +172,21 @@
 	}
 }
 
-.project .swiper-button-next:after,
-.project .swiper-button-prev:after {
- 	opacity: 0;
+
+
+
+
+/*===============================================
+				SWIPER PAGINATION
+=================================================*/
+
+.project .swiper-pagination {
+	margin-top: 1rem;
+	position: relative;
+	display: block;
+	
+	font-family: var(--font-alt);
+	text-align: left;
+	color: #FF7A00;
+	font-size: 12px;
 }
-
-

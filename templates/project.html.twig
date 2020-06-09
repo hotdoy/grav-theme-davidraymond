@@ -1,7 +1,13 @@
 {% extends 'partials/base.html.twig' %}
+
 {% block content %}
 
-<section class="description" data-reveal>{{ page.content }}</section>
+<section class="description" data-reveal>
+	<div class="description__wrapper">
+		{{ page.content }}
+	</div>
+<div class="swiper-pagination"></div>
+</section>
 
 <section class="carousel" data-reveal>
 	<div class="swiper-container">
@@ -25,25 +31,9 @@
 			{% endfor %}
 
 		</div>
-
-		<!-- Arrows -->
-    	{# <div class="swiper-button-next"></div> #}
-    	{# <div class="swiper-button-prev"></div> #}
+    	<div class="swiper-button-next"></div>
+    	<div class="swiper-button-prev"></div>
 	</div>
 </section>
-
-
-
-<script>
-	var swiper = new Swiper('.swiper-container', {
-		slidesPerView: 'auto',
-	  	centeredSlides: true,
-	  	spaceBetween: 32,
-	  	navigation: {
-        	nextEl: '.swiper-button-next',
-        	prevEl: '.swiper-button-prev',
-      	},
-	});
-</script>
 
 {% endblock %}
